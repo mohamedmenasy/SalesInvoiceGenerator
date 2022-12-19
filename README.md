@@ -15,6 +15,25 @@ A project for Back End Testing Udacity nano degree.
 - Exception Handling
 - Data Storage & I/O
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/mohamedmenasy/SalesInvoiceGenerator
+```
+
+Go to the project directory
+
+```bash
+  cd SalesInvoiceGenerator
+```
+
+Then run the following gradle command:
+
+```bash
+  ./gradlew run
+```
 ## Screenshots
 
 ![Screen Shot 2022-12-18 at 10 06 31 PM](https://user-images.githubusercontent.com/9781775/208317621-46430d5e-f2f9-4d7d-b319-3395d514e7cc.png)

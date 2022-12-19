@@ -37,12 +37,16 @@ public class InvoicesModel extends DefaultTableModel {
     @Override
     public Object getValueAt(int row, int column) {
         InvoiceHeader invoice = invoices.get(row);
-        return switch (column) {
-            case 0 -> invoice.getInvoiceNum();
-            case 1 -> dateFormat.format(invoice.getInvoiceDate());
-            case 2 -> invoice.getCustomerName();
-            case 3 -> invoice.getInvoiceTotal();
-            default -> null;
-        };
+        switch (column) {
+            case 0:
+                return invoice.getInvoiceNum();
+            case 1:
+                return dateFormat.format(invoice.getInvoiceDate());
+            case 2:
+                return invoice.getCustomerName();
+            case 3:
+                return invoice.getInvoiceTotal();
+        }
+        return null;
     }
 }

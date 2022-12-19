@@ -1,9 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'com.mohamedmenasy.salesinvoice'
 version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'com.mohamedmenasy.salesinvoice.Main'
 
 repositories {
     mavenCentral()

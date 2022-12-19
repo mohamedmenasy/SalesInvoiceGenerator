@@ -31,13 +31,18 @@ public class InvoiceDetailsModel extends DefaultTableModel {
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         InvoiceLine item = invoiceItems.get(rowIndex);
-        return switch (columnIndex) {
-            case 0 -> item.getInvoiceHeader().getInvoiceNum();
-            case 1 -> item.getItemName();
-            case 2 -> item.getItemPrice();
-            case 3 -> item.getCount();
-            case 4 -> item.getItemTotal();
-            default -> "";
-        };
+        switch (columnIndex) {
+            case 0:
+                return item.getInvoiceHeader().getInvoiceNum();
+            case 1:
+                return item.getItemName();
+            case 2:
+                return item.getItemPrice();
+            case 3:
+                return item.getCount();
+            case 4:
+                return item.getItemTotal();
+        }
+        return "";
     }
 }
